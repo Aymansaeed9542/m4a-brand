@@ -6,8 +6,8 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="navbar bg-base-100 shadow-sm flex flex-column py-5 px-10">
-      <div className="flex-1">
+    <div className="navbar bg-base-100 shadow-sm flex flex-column py-5 px-10 flex-row justify-between">
+      <div className="">
         <Link to="/">
           <img
             src={logo}

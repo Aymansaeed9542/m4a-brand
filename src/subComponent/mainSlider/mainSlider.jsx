@@ -6,14 +6,12 @@ import slide3 from "./../../assets/slide3.png";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import 'swiper/css/effect-fade';
-import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 const MainSlider = () => {
   return (
     <div className="w-full h-[40vh] md:h-[60vh]">
       <Swiper
-        effect={'fade'}
         spaceBetween={0}
         slidesPerView={1}
         loop={true}
@@ -21,8 +19,8 @@ const MainSlider = () => {
         pagination={{ clickable: true }}
         navigation={true}
         speed={900}
-        modules={[Autoplay, Pagination, Navigation, EffectFade]}
-        className="w-full h-full rounded-xl overflow-hidden"
+        modules={[Autoplay, Pagination, Navigation]}
+        className="w-full h-full overflow-hidden"
       >
         <SwiperSlide>
           <div className="relative w-full h-full">
