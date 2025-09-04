@@ -1,6 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
-import Navbar from './components/navbar/navbar.jsx'
 import Layout from './components/layout/layout.jsx'
 import Home from './components/home/home.jsx'
 import Products from './components/products/Products.jsx'
