@@ -52,23 +52,23 @@ const AboutUs = () => {
                 </Link>
               </div>
               
-              <div className="grid grid-cols-2 gap-6">
-                <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
                     <i className="fas fa-bullseye text-white text-2xl"></i>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+                  <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
                     To create high-quality, stylish clothing that empowers individuals to express their unique style while building a community of fashion-forward thinkers.
                   </p>
                 </div>
                 
-                <div className="bg-white p-8 rounded-2xl shadow-lg mt-8">
+                <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg sm:mt-8">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mb-6">
                     <i className="fas fa-eye text-white text-2xl"></i>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+                  <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
                     To become the go-to brand for modern, quality clothing that bridges the gap between street style and everyday comfort.
                   </p>
                 </div>
@@ -96,7 +96,7 @@ const AboutUs = () => {
                 <div className="w-32 h-32 bg-gradient-to-br from-gray-200 to-gray-300 rounded-full mx-auto mb-6 flex items-center justify-center">
                   <i className="fas fa-user text-gray-600 text-4xl"></i>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Mohamed Adel</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Mohamed Ahmed</h3>
                 <p className="text-lg text-gray-600 mb-4">Co-Founder & Creative Director</p>
                 <p className="text-gray-600 leading-relaxed">
                   Mohamed brings a keen eye for design and an unwavering commitment to quality. His vision for M4A centers around creating pieces that seamlessly blend style with functionality, ensuring every customer feels confident and comfortable.
