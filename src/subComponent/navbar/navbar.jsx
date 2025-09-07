@@ -84,7 +84,7 @@ export default function Navbar() {
           <NavLink 
             to="/" 
             className={`btn btn-ghost transition-colors duration-200 ${
-              scrolled ? 'text-gray-800 hover:text-gray-600' : 'text-white hover:text-gray-200'
+              scrolled ? 'text-gray-800 hover:text-gray-600' : 'text-white hover:text-white'
             }`}
           >
             Home
@@ -92,7 +92,7 @@ export default function Navbar() {
           <NavLink 
             to="/products" 
             className={`btn btn-ghost transition-colors duration-200 ${
-              scrolled ? 'text-gray-800 hover:text-gray-600' : 'text-white hover:text-gray-200'
+              scrolled ? 'text-gray-800 hover:text-gray-600' : 'text-white hover:text-white'
             }`}
           >
             Products
@@ -100,7 +100,7 @@ export default function Navbar() {
           <NavLink 
             to="/aboutus" 
             className={`btn btn-ghost transition-colors duration-200 ${
-              scrolled ? 'text-gray-800 hover:text-gray-600' : 'text-white hover:text-gray-200'
+              scrolled ? 'text-gray-800 hover:text-gray-600' : 'text-white hover:text-white'
             }`}
           >
             About Us
