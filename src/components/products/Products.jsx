@@ -48,7 +48,7 @@ const Products = () => {
     { id: 17, name: "Comfort First Hoodie", price: "599 LE", image: hoodie17, description: "Comfort-first design with premium materials. Feel the difference.", sizes: ["S", "M", "L", "XL"], colors: ["Black", "Gray", "White"] },
     { id: 18, name: "Urban Edge Hoodie", price: "699 LE", image: hoodie18, description: "Urban edge with sophisticated design. Stand out with style.", sizes: ["S", "M", "L", "XL"], colors: ["Charcoal", "Black", "Navy"] },
     { id: 19, name: "Classic Comfort Hoodie", price: "599 LE", image: hoodie19, description: "Classic comfort with modern appeal. A timeless addition to your wardrobe.", sizes: ["S", "M", "L", "XL"], colors: ["Gray", "Black", "White"] },
-    { id: 20, name: "Premium Style Hoodie", price: "749 LE", image: hoodie20, description: "Premium style with exceptional quality. Elevate your everyday look.", sizes: ["S", "M", "L", "XL"], colors: ["Black", "White", "Navy"] },
+    { id: 20, name: "Premium Style Hoodie", price: "749 LE ", image: hoodie20, description: "Premium style with exceptional quality. Elevate your everyday look.", sizes: ["S", "M", "L", "XL"], colors: ["Black", "White", "Navy"] },
     { id: 21, name: "Contemporary Hoodie", price: "649 LE", image: hoodie21, description: "Contemporary design with attention to detail. Modern and sophisticated.", sizes: ["S", "M", "L", "XL"], colors: ["Navy", "Charcoal", "Black"] },
     { id: 22, name: "Ultimate Comfort Hoodie", price: "699 LE", image: hoodie22, description: "Ultimate comfort meets premium style. Your new go-to hoodie.", sizes: ["S", "M", "L", "XL"], colors: ["Black", "Gray", "White"] }
   ]

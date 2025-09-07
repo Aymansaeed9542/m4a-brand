@@ -1,6 +1,6 @@
 import React from 'react'
 import MainSlider from '../../subComponent/mainSlider/mainSlider'
-import banner from './../../assets/banner.png'
+import banner from './../../assets/dark-banner.png'
 import hoodie from './../../assets/M4A White Hoodie.png'
 import tshirt from './../../assets/M4A Evergreen T-Shirt.png'
 import pants from './../../assets/M4A Premium Pants Design.png'
@@ -214,11 +214,11 @@ const Home = () => {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Curated selection of premium pieces that define modern comfort and style
             </p>
-          </div>
+      </div>
           
           <div className="relative">
-            <MainSlider/>
-            
+      <MainSlider/>
+      
             {/* Slider Controls */}
             <div className="flex justify-center mt-8 space-x-4">
               <button className="w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-900 transition-colors duration-300"></button>
