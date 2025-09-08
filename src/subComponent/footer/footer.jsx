@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
           {/* Brand Section */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 text-center md:text-left">
             <div className="mb-6">
               <h3 className="text-2xl font-bold mb-4">M4A Brand</h3>
               <p className="text-gray-300 leading-relaxed mb-6">
@@ -18,7 +18,7 @@ const Footer = () => {
               </p>
               
               {/* Social Media Icons */}
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                 <a 
                   href="https://facebook.com" 
                   target="_blank"
@@ -69,35 +69,35 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="text-center md:text-left">
             <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center">
+                <Link to="/" className="text-gray-300 hover:text-white hover:underline underline-offset-4 decoration-gray-400 transition-colors duration-300 inline-flex items-center justify-center md:justify-start">
                   <i className="fas fa-home mr-2 text-sm"></i>
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/products" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center">
+                <Link to="/products" className="text-gray-300 hover:text-white hover:underline underline-offset-4 decoration-gray-400 transition-colors duration-300 inline-flex items-center justify-center md:justify-start">
                   <i className="fas fa-shopping-bag mr-2 text-sm"></i>
                   Products
                 </Link>
               </li>
               <li>
-                <Link to="/aboutus" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center">
+                <Link to="/aboutus" className="text-gray-300 hover:text-white hover:underline underline-offset-4 decoration-gray-400 transition-colors duration-300 inline-flex items-center justify-center md:justify-start">
                   <i className="fas fa-info-circle mr-2 text-sm"></i>
                   About Us
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center">
+                <a href="#" className="text-gray-300 hover:text-white hover:underline underline-offset-4 decoration-gray-400 transition-colors duration-300 inline-flex items-center justify-center md:justify-start">
                   <i className="fas fa-shipping-fast mr-2 text-sm"></i>
                   Shipping Info
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center">
+                <a href="#" className="text-gray-300 hover:text-white hover:underline underline-offset-4 decoration-gray-400 transition-colors duration-300 inline-flex items-center justify-center md:justify-start">
                   <i className="fas fa-undo mr-2 text-sm"></i>
                   Returns
                 </a>
@@ -106,35 +106,35 @@ const Footer = () => {
           </div>
 
           {/* Customer Service */}
-          <div>
+          <div className="text-center md:text-left">
             <h4 className="text-lg font-semibold mb-6">Customer Service</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center">
+                <a href="#" className="text-gray-300 hover:text-white hover:underline underline-offset-4 decoration-gray-400 transition-colors duration-300 inline-flex items-center justify-center md:justify-start">
                   <i className="fas fa-question-circle mr-2 text-sm"></i>
                   FAQ
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center">
+                <a href="#" className="text-gray-300 hover:text-white hover:underline underline-offset-4 decoration-gray-400 transition-colors duration-300 inline-flex items-center justify-center md:justify-start">
                   <i className="fas fa-headset mr-2 text-sm"></i>
                   Contact Support
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center">
+                <a href="#" className="text-gray-300 hover:text-white hover:underline underline-offset-4 decoration-gray-400 transition-colors duration-300 inline-flex items-center justify-center md:justify-start">
                   <i className="fas fa-shield-alt mr-2 text-sm"></i>
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center">
+                <a href="#" className="text-gray-300 hover:text-white hover:underline underline-offset-4 decoration-gray-400 transition-colors duration-300 inline-flex items-center justify-center md:justify-start">
                   <i className="fas fa-file-contract mr-2 text-sm"></i>
                   Terms of Service
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center">
+                <a href="#" className="text-gray-300 hover:text-white hover:underline underline-offset-4 decoration-gray-400 transition-colors duration-300 inline-flex items-center justify-center md:justify-start">
                   <i className="fas fa-credit-card mr-2 text-sm"></i>
                   Payment Methods
                 </a>
@@ -143,10 +143,10 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="text-center md:text-left">
             <h4 className="text-lg font-semibold mb-6">Contact Info</h4>
             <div className="space-y-4">
-              <div className="flex items-start">
+              <div className="flex items-start justify-center md:justify-start">
                 <i className="fas fa-map-marker-alt text-white mr-3 mt-1"></i>
                 <div>
                   <p className="text-gray-300">
@@ -156,28 +156,28 @@ const Footer = () => {
                 </div>
               </div>
               
-              <div className="flex items-center">
+              <div className="flex items-center justify-center md:justify-start">
                 <i className="fas fa-phone text-white mr-3"></i>
-                <a href="tel:+201234567890" className="text-gray-300 hover:text-white transition-colors duration-300">
+                <a href="tel:+201234567890" className="text-gray-300 hover:text-white hover:underline underline-offset-4 decoration-gray-400 transition-colors duration-300">
                   +20 123 456 7890
                 </a>
               </div>
               
-              <div className="flex items-center">
+              <div className="flex items-center justify-center md:justify-start">
                 <i className="fas fa-mobile-alt text-white mr-3"></i>
-                <a href="tel:+201098765432" className="text-gray-300 hover:text-white transition-colors duration-300">
+                <a href="tel:+201098765432" className="text-gray-300 hover:text-white hover:underline underline-offset-4 decoration-gray-400 transition-colors duration-300">
                   +20 109 876 5432
                 </a>
               </div>
               
-              <div className="flex items-center">
+              <div className="flex items-center justify-center md:justify-start">
                 <i className="fas fa-envelope text-white mr-3"></i>
-                <a href="mailto:info@m4abrand.com" className="text-gray-300 hover:text-white transition-colors duration-300">
+                <a href="mailto:info@m4abrand.com" className="text-gray-300 hover:text-white hover:underline underline-offset-4 decoration-gray-400 transition-colors duration-300">
                   info@m4abrand.com
                 </a>
               </div>
               
-              <div className="flex items-center">
+              <div className="flex items-center justify-center md:justify-start">
                 <i className="fas fa-clock text-white mr-3"></i>
                 <p className="text-gray-300">
                   Sun - Thu: 9:00 AM - 10:00 PM<br />
@@ -216,7 +216,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="border-t border-gray-700">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 max-w-7xl">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
               <p>&copy; 2024 M4A Brand. All rights reserved.</p>
             </div>

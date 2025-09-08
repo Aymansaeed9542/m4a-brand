@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import Navbar from './../../subComponent/navbar/navbar'
-import Footer from '../footer/footer'
+import Footer from './../../subComponent/footer/footer'
 import { Outlet, useLocation } from 'react-router-dom'
 
 const Layout = () => {
