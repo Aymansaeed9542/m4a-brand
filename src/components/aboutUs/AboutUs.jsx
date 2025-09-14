@@ -144,7 +144,7 @@ const AboutUs = () => {
                 <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl mx-auto mb-6 flex items-center justify-center">
                   <i className="fas fa-shopping-cart text-white text-2xl"></i>
                 </div>
-                <div className="text-4xl font-bold mb-2">1000+</div>
+                <div className="text-4xl font-bold mb-2">500+</div>
                 <div className="text-white/80">Happy Customers</div>
               </div>
               

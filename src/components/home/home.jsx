@@ -54,8 +54,13 @@ const Home = () => {
                 </Link>
                 <button className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 hover:border-white/50 transition-all duration-300 backdrop-blur-sm">
                   <i className="fas fa-play mr-2"></i>
-                  <span>Watch Story</span>
-                </button>
+                <Link 
+                  to="/aboutUs" 
+                  className=""
+                >
+                  <span>Watch Our Story</span>
+                  <i className="fas fa-arrow-right ml-2"></i>
+                </Link></button>
               </div>
               
               {/* Stats */}
