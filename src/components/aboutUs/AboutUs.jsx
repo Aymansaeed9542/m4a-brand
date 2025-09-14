@@ -93,8 +93,12 @@ const AboutUs = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div className="text-center">
-                <div className="w-32 h-32 bg-gradient-to-br from-gray-200 to-gray-300 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <i className="fas fa-user text-gray-600 text-4xl"></i>
+                <div className="w-40 h-40 rounded-full mx-auto mb-6 overflow-hidden shadow-lg border-4 border-white">
+                  <img 
+                    src="/muhammed.jpg" 
+                    alt="Mohamed Ahmed - Co-Founder & Creative Director"
+                    className="w-full h-full object-cover object-center"
+                  />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Mohamed Ahmed</h3>
                 <p className="text-lg text-gray-600 mb-4">Co-Founder & Creative Director</p>
@@ -103,9 +107,14 @@ const AboutUs = () => {
                 </p>
               </div>
               
+              
               <div className="text-center">
-                <div className="w-32 h-32 bg-gradient-to-br from-gray-200 to-gray-300 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <i className="fas fa-user text-gray-600 text-4xl"></i>
+                <div className="w-40 h-40 rounded-full mx-auto mb-6 overflow-hidden shadow-lg border-4 border-white">
+                  <img 
+                    src="/alaa.jpg" 
+                    alt="Alaa Montaser - Co-Founder & Brand Strategist"
+                    className="w-full h-full object-cover object-center"
+                  />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Alaa Montaser</h3>
                 <p className="text-lg text-gray-600 mb-4">Co-Founder & Brand Strategist</p>

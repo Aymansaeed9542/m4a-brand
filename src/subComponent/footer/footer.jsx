@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { FaFacebookF, FaInstagram, FaTwitter, FaTiktok, FaWhatsapp } from 'react-icons/fa'
+import { FaFacebookF, FaInstagram, FaTiktok, FaWhatsapp } from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -20,7 +20,7 @@ const Footer = () => {
               {/* Social Media Icons */}
               <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                 <a 
-                  href="https://facebook.com" 
+                  href="https://www.facebook.com/share/1amADzSh13/" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors duration-300 hover:scale-110 shadow-lg"
@@ -29,22 +29,13 @@ const Footer = () => {
                   <FaFacebookF className="text-white text-lg" />
                 </a>
                 <a 
-                  href="https://instagram.com" 
+                  href="https://www.instagram.com/m4abrand?igsh=cnpyMzAwczJhZW80&utm_source=ig_contact_invite" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-110 shadow-lg"
                   aria-label="Follow us on Instagram"
                 >
                   <FaInstagram className="text-white text-lg" />
-                </a>
-                <a 
-                  href="https://twitter.com" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors duration-300 hover:scale-110 shadow-lg"
-                  aria-label="Follow us on Twitter"
-                >
-                  <FaTwitter className="text-white text-lg" />
                 </a>
                 <a 
                   href="https://tiktok.com" 
@@ -56,7 +47,7 @@ const Footer = () => {
                   <FaTiktok className="text-white text-lg" />
                 </a>
                 <a 
-                  href="https://wa.me/201234567890" 
+                  href="https://wa.me/201225194463" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors duration-300 hover:scale-110 shadow-lg"
@@ -150,32 +141,26 @@ const Footer = () => {
                 <i className="fas fa-map-marker-alt text-white mr-3 mt-1"></i>
                 <div>
                   <p className="text-gray-300">
-                    123 Corniche Road<br />
-                    Alexandria, Egypt 21500
+                    Agamy K21<br />
+                    Alexandria, Egypt 
                   </p>
                 </div>
               </div>
               
               <div className="flex items-center justify-center md:justify-start">
                 <i className="fas fa-phone text-white mr-3"></i>
-                <a href="tel:+201234567890" className="text-gray-300 hover:text-white hover:underline underline-offset-4 decoration-gray-400 transition-colors duration-300">
-                  +20 123 456 7890
+                <a href="https://wa.me/201225194463" className="text-gray-300 hover:text-white hover:underline underline-offset-4 decoration-gray-400 transition-colors duration-300">
+                  +20 122 519 4463
                 </a>
               </div>
               
               <div className="flex items-center justify-center md:justify-start">
                 <i className="fas fa-mobile-alt text-white mr-3"></i>
-                <a href="tel:+201098765432" className="text-gray-300 hover:text-white hover:underline underline-offset-4 decoration-gray-400 transition-colors duration-300">
-                  +20 109 876 5432
+                <a href="https://wa.me/201277341769" className="text-gray-300 hover:text-white hover:underline underline-offset-4 decoration-gray-400 transition-colors duration-300">
+                  +20 127 734 1769
                 </a>
               </div>
               
-              <div className="flex items-center justify-center md:justify-start">
-                <i className="fas fa-envelope text-white mr-3"></i>
-                <a href="mailto:info@m4abrand.com" className="text-gray-300 hover:text-white hover:underline underline-offset-4 decoration-gray-400 transition-colors duration-300">
-                  info@m4abrand.com
-                </a>
-              </div>
               
               <div className="flex items-center justify-center md:justify-start">
                 <i className="fas fa-clock text-white mr-3"></i>
