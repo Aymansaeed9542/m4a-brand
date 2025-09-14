@@ -24,8 +24,22 @@ import hoodie20 from '../../assets/hoodies/20.jpg'
 import hoodie21 from '../../assets/hoodies/21.jpg'
 import hoodie22 from '../../assets/hoodies/22.jpg'
 
+// Import t-shirt images
+import tshirtCharcoal from '../../assets/t-shirts/M4A Premium T-Shirt Design.png'
+import tshirtEvergreen from '../../assets/t-shirts/M4A Evergreen T-Shirt Product.png'
+import tshirtLavender from '../../assets/t-shirts/M4A Lavender T-Shirt Product.png'
+import tshirtOrange from '../../assets/t-shirts/M4A Orange T-Shirt Product.png'
+import tshirtWhite from '../../assets/t-shirts/M4A White T-Shirt Product.png'
+
+// Import pants images
+import pantsBeige from '../../assets/pants/M4A Beige Pants Product.png'
+import pantsBlack from '../../assets/pants/M4A Black Pants Product.png'
+import pantsCharcoal from '../../assets/pants/M4A Charcoal Pants Product.png'
+import pantsEvergreen from '../../assets/pants/M4A Evergreen Pants Product.png'
+import pantsNavy from '../../assets/pants/M4A Navy Pants Product.png'
+
 const Products = () => {
-  const [selectedHoodie, setSelectedHoodie] = useState(null)
+  const [selectedProduct, setSelectedProduct] = useState(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   // Hoodie data with details
@@ -53,14 +67,32 @@ const Products = () => {
     { id: 22, name: "Ultimate Comfort Hoodie", price: "699 LE", image: hoodie22, description: "Ultimate comfort meets premium style. Your new go-to hoodie.", sizes: ["S", "M", "L", "XL"], colors: ["Black", "Gray", "White"] }
   ]
 
-  const openModal = (hoodie) => {
-    setSelectedHoodie(hoodie)
+  // T-shirt data with details
+  const tshirts = [
+    { id: 1, name: "M4A Charcoal T-Shirt", price: "299 LE", image: tshirtCharcoal, description: "Premium cotton blend with modern fit. Perfect for everyday wear.", sizes: ["S", "M", "L", "XL"], colors: ["Charcoal", "Black", "White"] },
+    { id: 2, name: "M4A Evergreen T-Shirt", price: "299 LE", image: tshirtEvergreen, description: "Comfortable and stylish with a relaxed fit. Ideal for casual outings.", sizes: ["S", "M", "L", "XL"], colors: ["Evergreen", "Black", "Navy"] },
+    { id: 3, name: "M4A Lavender T-Shirt", price: "299 LE", image: tshirtLavender, description: "Contemporary design with premium materials. Built for comfort and style.", sizes: ["S", "M", "L", "XL"], colors: ["Lavender", "Purple", "White"] },
+    { id: 4, name: "M4A Orange T-Shirt", price: "299 LE", image: tshirtOrange, description: "Clean lines and simple design. Perfect for the minimalist wardrobe.", sizes: ["S", "M", "L", "XL"], colors: ["Orange", "Black", "White"] },
+    { id: 5, name: "M4A White T-Shirt", price: "299 LE", image: tshirtWhite, description: "Ultra-soft fabric with superior comfort. Your new favorite t-shirt.", sizes: ["S", "M", "L", "XL"], colors: ["White", "Black", "Gray"] }
+  ]
+
+  // Pants data with details
+  const pants = [
+    { id: 1, name: "M4A Beige Pants", price: "399 LE", image: pantsBeige, description: "Premium cotton blend with modern fit. Perfect for everyday wear.", sizes: ["S", "M", "L", "XL"], colors: ["Beige", "Brown", "Cream"] },
+    { id: 2, name: "M4A Black Pants", price: "399 LE", image: pantsBlack, description: "Comfortable and stylish with a relaxed fit. Ideal for casual outings.", sizes: ["S", "M", "L", "XL"], colors: ["Black", "Charcoal", "Navy"] },
+    { id: 3, name: "M4A Charcoal Pants", price: "399 LE", image: pantsCharcoal, description: "Contemporary design with premium materials. Built for comfort and style.", sizes: ["S", "M", "L", "XL"], colors: ["Charcoal", "Black", "Gray"] },
+    { id: 4, name: "M4A Evergreen Pants", price: "399 LE", image: pantsEvergreen, description: "Clean lines and simple design. Perfect for the minimalist wardrobe.", sizes: ["S", "M", "L", "XL"], colors: ["Evergreen", "Forest", "Olive"] },
+    { id: 5, name: "M4A Navy Pants", price: "399 LE", image: pantsNavy, description: "Ultra-soft fabric with superior comfort. Your new favorite pants.", sizes: ["S", "M", "L", "XL"], colors: ["Navy", "Blue", "Black"] }
+  ]
+
+  const openModal = (product) => {
+    setSelectedProduct(product)
     setIsModalOpen(true)
   }
 
   const closeModal = () => {
     setIsModalOpen(false)
-    setSelectedHoodie(null)
+    setSelectedProduct(null)
   }
 
   return (
@@ -176,15 +208,125 @@ const Products = () => {
         </div>
       </section>
 
+      {/* T-Shirts Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Premium T-Shirts</h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Essential comfort meets modern style. Perfect for any occasion with premium materials.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {tshirts.map((tshirt) => (
+              <div
+                key={tshirt.id}
+                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden group"
+              >
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src={tshirt.image}
+                    alt={tshirt.name}
+                    className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
+                  
+                  {/* Hover Overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <button
+                      onClick={() => openModal(tshirt)}
+                      className="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200 transform translate-y-4 group-hover:translate-y-0"
+                    >
+                      View Details
+                    </button>
+                  </div>
+                </div>
+                
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{tshirt.name}</h3>
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">{tshirt.description}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-2xl font-bold text-gray-900">{tshirt.price}</span>
+                    <div className="flex text-yellow-400">
+                      <i className="fas fa-star text-sm"></i>
+                      <i className="fas fa-star text-sm"></i>
+                      <i className="fas fa-star text-sm"></i>
+                      <i className="fas fa-star text-sm"></i>
+                      <i className="fas fa-star text-sm"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pants Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Premium Pants</h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Comfortable and stylish bottoms. Perfect for any outfit with premium materials.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {pants.map((pant) => (
+              <div
+                key={pant.id}
+                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden group"
+              >
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src={pant.image}
+                    alt={pant.name}
+                    className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
+                  
+                  {/* Hover Overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <button
+                      onClick={() => openModal(pant)}
+                      className="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200 transform translate-y-4 group-hover:translate-y-0"
+                    >
+                      View Details
+                    </button>
+                  </div>
+                </div>
+                
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{pant.name}</h3>
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">{pant.description}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-2xl font-bold text-gray-900">{pant.price}</span>
+                    <div className="flex text-yellow-400">
+                      <i className="fas fa-star text-sm"></i>
+                      <i className="fas fa-star text-sm"></i>
+                      <i className="fas fa-star text-sm"></i>
+                      <i className="fas fa-star text-sm"></i>
+                      <i className="fas fa-star text-sm"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Modal */}
-      {isModalOpen && selectedHoodie && (
+      {isModalOpen && selectedProduct && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             <div className="relative">
               <img
-                src={selectedHoodie.image}
-                alt={selectedHoodie.name}
-                className="w-full h-80 object-cover object-top rounded-t-2xl"
+                src={selectedProduct.image}
+                alt={selectedProduct.name}
+                className="w-full h-80 object-cover object-center rounded-t-2xl"
               />
               <button
                 onClick={closeModal}
@@ -195,14 +337,14 @@ const Products = () => {
             </div>
             
             <div className="p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">{selectedHoodie.name}</h2>
-              <p className="text-gray-600 text-lg mb-6">{selectedHoodie.description}</p>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">{selectedProduct.name}</h2>
+              <p className="text-gray-600 text-lg mb-6">{selectedProduct.description}</p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">Available Sizes</h3>
                   <div className="flex flex-wrap gap-2">
-                    {selectedHoodie.sizes.map((size) => (
+                    {selectedProduct.sizes.map((size) => (
                       <span key={size} className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">
                         {size}
                       </span>
@@ -213,7 +355,7 @@ const Products = () => {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">Available Colors</h3>
                   <div className="flex flex-wrap gap-2">
-                    {selectedHoodie.colors.map((color) => (
+                    {selectedProduct.colors.map((color) => (
                       <span key={color} className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">
                         {color}
                       </span>
@@ -223,7 +365,7 @@ const Products = () => {
               </div>
               
               <div className="flex items-center justify-between">
-                <span className="text-3xl font-bold text-gray-900">{selectedHoodie.price}</span>
+                <span className="text-3xl font-bold text-gray-900">{selectedProduct.price}</span>
                 <div className="flex gap-3">
                   <button className="bg-gray-100 text-gray-800 px-6 py-3 rounded-xl font-semibold hover:bg-gray-200 transition-colors duration-200">
                     Add to Cart
