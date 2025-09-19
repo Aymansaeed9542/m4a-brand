@@ -43,37 +43,22 @@ const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
-  // Smooth scroll to section if URL has a hash
+  // If navigated with state.scrollTo, scroll only once to that section
   useEffect(() => {
-    if (!location.hash) return
-    const id = location.hash.slice(1)
-
-    const tryScroll = () => {
-      const el = document.getElementById(id)
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-        return true
-      }
-      return false
+    const sectionId = location.state && location.state.scrollTo
+    if (!sectionId) return
+    const el = document.getElementById(sectionId)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    } else {
+      // retry shortly in case content isn't ready yet
+      const t = setTimeout(() => {
+        const el2 = document.getElementById(sectionId)
+        if (el2) el2.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, 100)
+      return () => clearTimeout(t)
     }
-
-    // Retry until the section exists (handles prod render timing)
-    let attempts = 0
-    const maxAttempts = 30 // ~1.5s at 50ms intervals
-    const start = () => {
-      if (tryScroll()) return
-      const interval = setInterval(() => {
-        attempts += 1
-        if (tryScroll() || attempts >= maxAttempts) {
-          clearInterval(interval)
-        }
-      }, 50)
-      return interval
-    }
-
-    const interval = start()
-    return () => { if (interval) clearInterval(interval) }
-  }, [location.key, location.hash])
+  }, [location.state])
 
   // Hoodie data with details
   const hoodies = [
