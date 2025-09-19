@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 // Import hoodie images
 import hoodie1 from '../../assets/hoodies/1.jpg'
@@ -39,8 +39,20 @@ import pantsEvergreen from '../../assets/pants/M4A Evergreen Pants Product.png'
 import pantsNavy from '../../assets/pants/M4A Navy Pants Product.png'
 
 const Products = () => {
+  const location = useLocation()
   const [selectedProduct, setSelectedProduct] = useState(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
+
+  // Smooth scroll to section if URL has a hash
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '')
+      const el = document.getElementById(id)
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+    }
+  }, [location.hash])
 
   // Hoodie data with details
   const hoodies = [
@@ -108,7 +120,7 @@ const Products = () => {
       </div>
 
       {/* Hoodies Section */}
-      <section className="py-16">
+      <section id="hoodies" className="py-16 scroll-mt-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Premium Hoodies</h2>
@@ -209,7 +221,7 @@ const Products = () => {
       </section>
 
       {/* T-Shirts Section */}
-      <section className="py-16 bg-white">
+      <section id="tshirts" className="py-16 bg-white scroll-mt-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Premium T-Shirts</h2>
@@ -264,7 +276,7 @@ const Products = () => {
       </section>
 
       {/* Pants Section */}
-      <section className="py-16 bg-gray-50">
+      <section id="pants" className="py-16 bg-gray-50 scroll-mt-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Premium Pants</h2>

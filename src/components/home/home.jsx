@@ -125,7 +125,7 @@ const Home = () => {
                 </div>
                 <span className='text-gray-500 text-sm ml-2'>(4.8)</span>
               </div>
-            <Link to="/products">
+            <Link to="/products#hoodies">
                           <button className='w-full bg-black text-white py-3 rounded-xl font-semibold hover:bg-gray-800 transition-colors duration-200'>
               View all Products
               </button>
@@ -159,7 +159,7 @@ const Home = () => {
                 <span className='text-gray-500 text-sm ml-2'>(4.9)</span>
               </div>
 
-            <Link to="/products">
+            <Link to="/products#tshirts">
                           <button className='w-full bg-black text-white py-3 rounded-xl font-semibold hover:bg-gray-800 transition-colors duration-200'>
               View all Products
               </button>
@@ -192,7 +192,7 @@ const Home = () => {
                 </div>
                 <span className='text-gray-500 text-sm ml-2'>(4.7)</span>
               </div>
-            <Link to="/products">
+            <Link to="/products#pants">
                           <button className='w-full bg-black text-white py-3 rounded-xl font-semibold hover:bg-gray-800 transition-colors duration-200'>
               View all Products
               </button>
