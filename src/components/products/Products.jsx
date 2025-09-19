@@ -195,7 +195,13 @@ const Products = () => {
                 key={hoodie.id}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden group"
               >
-                <div className="relative h-64 overflow-hidden">
+                <div
+                  className="relative h-64 overflow-hidden cursor-pointer"
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => openModal(hoodie)}
+                  onKeyDown={(e) => { if (e.key === 'Enter') openModal(hoodie) }}
+                >
                   <img
                     src={hoodie.image}
                     alt={hoodie.name}
@@ -250,7 +256,13 @@ const Products = () => {
                 key={tshirt.id}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden group"
               >
-                <div className="relative h-64 overflow-hidden">
+                <div
+                  className="relative h-64 overflow-hidden cursor-pointer"
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => openModal(tshirt)}
+                  onKeyDown={(e) => { if (e.key === 'Enter') openModal(tshirt) }}
+                >
                   <img
                     src={tshirt.image}
                     alt={tshirt.name}
@@ -305,7 +317,13 @@ const Products = () => {
                 key={pant.id}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden group"
               >
-                <div className="relative h-64 overflow-hidden">
+                <div
+                  className="relative h-64 overflow-hidden cursor-pointer"
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => openModal(pant)}
+                  onKeyDown={(e) => { if (e.key === 'Enter') openModal(pant) }}
+                >
                   <img
                     src={pant.image}
                     alt={pant.name}
