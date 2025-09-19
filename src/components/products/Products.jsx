@@ -45,13 +45,26 @@ const Products = () => {
 
   // Smooth scroll to section if URL has a hash
   useEffect(() => {
-    if (location.hash) {
-      const id = location.hash.replace('#', '')
+    if (!location.hash) return
+    const id = location.hash.slice(1)
+
+    const tryScroll = () => {
       const el = document.getElementById(id)
       if (el) {
         el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        return true
       }
+      return false
     }
+
+    // Try immediately, then after paint, then a short retry for prod timing
+    if (tryScroll()) return
+    const raf = requestAnimationFrame(() => {
+      if (tryScroll()) return
+      setTimeout(() => { tryScroll() }, 100)
+    })
+
+    return () => cancelAnimationFrame(raf)
   }, [location.hash])
 
   // Hoodie data with details
