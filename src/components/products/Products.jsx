@@ -57,15 +57,23 @@ const Products = () => {
       return false
     }
 
-    // Try immediately, then after paint, then a short retry for prod timing
-    if (tryScroll()) return
-    const raf = requestAnimationFrame(() => {
+    // Retry until the section exists (handles prod render timing)
+    let attempts = 0
+    const maxAttempts = 30 // ~1.5s at 50ms intervals
+    const start = () => {
       if (tryScroll()) return
-      setTimeout(() => { tryScroll() }, 100)
-    })
+      const interval = setInterval(() => {
+        attempts += 1
+        if (tryScroll() || attempts >= maxAttempts) {
+          clearInterval(interval)
+        }
+      }, 50)
+      return interval
+    }
 
-    return () => cancelAnimationFrame(raf)
-  }, [location.hash])
+    const interval = start()
+    return () => { if (interval) clearInterval(interval) }
+  }, [location.key, location.hash])
 
   // Hoodie data with details
   const hoodies = [
