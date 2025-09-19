@@ -47,7 +47,7 @@ const Footer = () => {
                   <FaTiktok className="text-white text-lg" />
                 </a>
                 <a 
-                  href="https://wa.me/201225194463" 
+                  href="https://wa.me/message/NHLJKPXMFR3EJ1" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors duration-300 hover:scale-110 shadow-lg"
@@ -149,8 +149,8 @@ const Footer = () => {
               
               <div className="flex items-center justify-center md:justify-start">
                 <i className="fas fa-phone text-white mr-3"></i>
-                <a href="https://wa.me/201225194463" className="text-gray-300 hover:text-white hover:underline underline-offset-4 decoration-gray-400 transition-colors duration-300">
-                  +20 122 519 4463
+                <a href="https://wa.me/message/NHLJKPXMFR3EJ1" className="text-gray-300 hover:text-white hover:underline underline-offset-4 decoration-gray-400 transition-colors duration-300">
+                  WhatsApp — Primary
                 </a>
               </div>
               

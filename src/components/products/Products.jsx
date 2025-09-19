@@ -139,11 +139,25 @@ const Products = () => {
               <div className="flex-1">
                 <h3 className="font-bold text-xl text-red-800 mb-3">تنويه هام</h3>
                 <p className="text-base leading-relaxed text-gray-800 mb-4">
-                  خدمة الدفع عن طريق الكارت <span className="font-bold text-red-600">غير متاحة حالياً</span>. لطلب المنتج، يرجى أخذ لقطة شاشة (Screenshot) للمنتج وإرسالها عبر واتساب على الأرقام التالية:
+                  خدمة الدفع عن طريق الكارت <span className="font-bold text-red-600">غير متاحة حالياً</span>. لطلب المنتج، يرجى أخذ لقطة شاشة (Screenshot) للمنتج وإرسالها عبر واتساب على الرابط الأساسي التالي أو عبر الأرقام:
                 </p>
 
                 {/* Phone Numbers */}
                 <div className="space-y-3">
+                  {/* Primary WhatsApp Link */}
+                  <div className="flex items-center gap-3 bg-white p-3 rounded-lg border border-red-200">
+                    <div className="text-green-600 text-xl">💬</div>
+                    <span className="font-bold text-lg text-green-600">الواتساب الأساسي</span>
+                    <a 
+                      href="https://wa.me/message/NHLJKPXMFR3EJ1" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="mr-auto bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-200"
+                    >
+                      افتح واتساب
+                    </a>
+                  </div>
+
                   <div className="flex items-center gap-3 bg-white p-3 rounded-lg border border-red-200">
                     <div className="text-green-600 text-xl">📞</div>
                     <span className="font-bold text-lg text-green-600">01225194463</span>
