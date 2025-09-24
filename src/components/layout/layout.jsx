@@ -7,8 +7,12 @@ const Layout = () => {
   const location = useLocation()
 
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-  }, [location.pathname])
+    const hasHash = !!location.hash
+    const hasScrollTo = location.state && location.state.scrollTo
+    if (!hasHash && !hasScrollTo) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+    }
+  }, [location.pathname, location.hash, location.state])
 
   return (
     <div className="min-h-screen flex flex-col">

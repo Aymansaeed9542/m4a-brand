@@ -53,7 +53,11 @@ const Products = () => {
     const tryScroll = () => {
       const el = document.getElementById(targetId)
       if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        // Use instant first to prevent browser default jumping to top, then smooth adjust
+        el.scrollIntoView({ behavior: 'instant', block: 'start' })
+        requestAnimationFrame(() => {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        })
         return true
       }
       return false
