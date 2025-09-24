@@ -43,22 +43,34 @@ const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
-  // If navigated with state.scrollTo, scroll only once to that section
+  // Scroll when either state.scrollTo or hash is provided (handles Vercel)
   useEffect(() => {
-    const sectionId = location.state && location.state.scrollTo
-    if (!sectionId) return
-    const el = document.getElementById(sectionId)
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    } else {
-      // retry shortly in case content isn't ready yet
-      const t = setTimeout(() => {
-        const el2 = document.getElementById(sectionId)
-        if (el2) el2.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      }, 100)
-      return () => clearTimeout(t)
+    const fromState = location.state && location.state.scrollTo
+    const fromHash = location.hash && location.hash.replace('#', '')
+    const targetId = fromState || fromHash
+    if (!targetId) return
+
+    const tryScroll = () => {
+      const el = document.getElementById(targetId)
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        return true
+      }
+      return false
     }
-  }, [location.state])
+
+    // Retry up to ~1s to handle async rendering in production
+    let attempts = 0
+    const max = 20
+    if (tryScroll()) return
+    const interval = setInterval(() => {
+      attempts += 1
+      if (tryScroll() || attempts >= max) {
+        clearInterval(interval)
+      }
+    }, 50)
+    return () => clearInterval(interval)
+  }, [location.state, location.hash])
 
   // Hoodie data with details
   const hoodies = [
